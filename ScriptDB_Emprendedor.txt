@@ -1,0 +1,34 @@
+create database emprendedor;
+use emprendedor;
+create table sucursal (idSucursal integer primary key not null auto_increment,
+nombreSucursal varchar (30) not null,
+direccionSucursal varchar (30) not null
+);
+
+create table producto (idProducto integer primary key not null auto_increment,
+nombreProducto varchar (30) not null,
+precioProducto integer
+);
+
+create table cliente (rutCliente integer (9) primary key not null,
+nombreCliente varchar (30) not null,
+apellidoCliente varchar (30) not null
+);
+
+create table boleta (idBoleta integer primary key not null auto_increment,
+fecha date not null,
+totalBoleta integer,
+idSucursal integer not null,
+rutCliente integer (9) not null,
+foreign key (idSucursal) references sucursal(idSucursal),
+foreign key (rutCliente) references cliente(rutCliente)
+);
+
+create table  venta (idVenta integer primary key not null auto_increment,
+cantidadVenta integer not null,
+totalVenta integer not null,
+idProducto integer not null,
+idBoleta integer not null,
+foreign key (idProducto) references producto(idProducto),
+foreign key (idBoleta) references boleta(idBoleta)
+);
