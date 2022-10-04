@@ -19,7 +19,7 @@
 </div>
     </header>
     <?php
-   include './vista/modulos/navegacionCliente.php';
+   include './vista/modulos/navegacionCompras.php';
    ?>
 
    <div>
