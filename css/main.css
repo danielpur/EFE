@@ -1,0 +1,29 @@
+#formLogin {
+    margin-top: 15px !important;
+    margin: auto;
+    border: 1px solid black;
+    background-image: linear-gradient(-0deg, #006CB7, #43B2FF) !important;
+    box-shadow: 0 1px 1px 0;
+}
+
+#tablaLogin {
+    margin: auto !important;
+}
+
+#btnLogin {
+    width: 100%;
+}
+
+#imgLogin {
+    border-radius: 15px;
+}
+
+#tablaMostrar {
+    text-align: center;
+    width: 100%;
+}
+
+#tablaMostrar th {
+    background-color: #006CB7 !important;
+    text-align: center;
+}
