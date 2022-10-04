@@ -1,14 +1,15 @@
 <?php
-class usuarioLogin {
+class usuarioLogin
+{
 
-    public function __construct(){
-
+    public function __construct()
+    {
     }
 
     public function verificarUsuario($usuario, $contrasenia)
     {
         $rutCliente = (int)$usuario;
-        $usuarioExiste=false;
+        $usuarioExiste = false;
         try {
             //CONECTAR BASE DE DATOS Y EJECUTAR QUERY
             include_once '../conexion/conexionNegocio.php';
@@ -18,17 +19,10 @@ class usuarioLogin {
             $query->execute(['rutCliente' => $rutCliente, 'contrasenia' => $contrasenia]);
             while ($row = $query->fetch()) {
                 $usuarioExiste = $row['idUsuario'];
-                print_r($usuarioExiste);
             }
         } catch (Exception $e) {
             echo 'ERROR' . $e;
         }
         return $usuarioExiste;
     }
-
 }
-?>
-
-
-
-

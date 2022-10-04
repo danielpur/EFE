@@ -47,13 +47,18 @@ class Productos{
 		<tr>
 			<th>Producto</th>
 			<th>Precio</th>
+            <th>Agregar</th>
+            <th>Quitar</th>
 		</tr>
 	</thead><tbody>';
             while ($row = $query->fetch()) {
                 echo '
+                <input type="hidden" name="idProducto" value="' . $row["idProducto"] . '">
                 <tr>
                 <td>' . $row["nombreProducto"] . '</td>
-                <td>' . $row["precioProducto"] . '</td>          
+                <td>' . $row["precioProducto"] . '</td>
+                <td><button class="btn btn-primary" onclick="agregarProducto();">+</button></td> 
+                <td><button class="btn btn-primary">-</button></td>
             </tr>';
             }
         } catch (Exception $e) {
