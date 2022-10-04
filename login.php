@@ -27,7 +27,7 @@
     <section>
 
         <form id="formLogin" class="mx-5 p-3" method="POST" action="./controlador/login.php">
-            <h3 style="text-align:center">Ingresar a Sistema</h3>
+            <h3 style="text-align:center">Ingresar a Tienda</h3>
             <table id="tablaLogin">
                 <tr>
                     <td>

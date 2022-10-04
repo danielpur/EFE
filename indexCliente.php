@@ -21,34 +21,17 @@
         <div>
         </div>
     </header>
-
+    <?php
+   include './vista/modulos/navegacion.php';
+   ?>
     <section>
-
-        <form id="formLogin" class="mx-5 p-3" method="POST" action="./controlador/login.php">
-            <h3 style="text-align:center">Ingresar a CLiente</h3>
-            <table id="tablaLogin">
-                <tr>
-                    <td>
-                        <label for="Usuario" class="form-label">Usuario</label>
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" id="usuarioLogin" name="usuarioLogin">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="Contraseña" class="form-label">Contraseña</label>
-                    </td>
-                    <td>
-                        <input type="password" class="form-control" id="passLogin" name="passLogin">
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <button id="btnLogin" type="submit" class="btn btn-success">Ingresar</button>
-        </form>
-
-
+        <div id=contenedorTablaMostrar class="px-5">
+        <?php
+    include './modelo/productos.php';
+    $productos = new Productos();
+    $productos->mostrarProductosCliente();
+    ?>
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

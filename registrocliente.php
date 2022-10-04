@@ -27,7 +27,7 @@
     ?>
     <section>
 
-        <form id="formLogin" class="mx-5 p-3" method="POST" action="./controlador/registrarclientes.php">
+        <form id="formLogin" class="mx-5 p-3" method="POST" action="./controlador/registrarcliente.php">
             <h3 style="text-align:center">Registrar Datos Personales</h3>
             <table id="tablaLogin">
 

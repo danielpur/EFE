@@ -1,5 +1,6 @@
 <?php
 include_once '../modelo/clientes.php';
+print_r("ingreso control");
 
 if(isset($_POST['rutCliente']) && 
 isset($_POST['nombreCliente']) && 
