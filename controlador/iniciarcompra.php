@@ -8,6 +8,10 @@ if (isset($_POST['idSucursal'])) {
     print_r("ingreso control" . $_SESSION['rutUsuarioSesion']);
     $compras = new Compras();
     $compras->iniciarCompra($idSucursal, $rutCliente);
+    $compras->obtenerIdBoleta();
+    if(isset($_SESSION['boletaSesion'])){
+        header('location: ../compras.php');
 
-    header('location: ../compras.php');
+    }
+
 }

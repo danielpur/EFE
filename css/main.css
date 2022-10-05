@@ -26,4 +26,22 @@
 #tablaMostrar th {
     background-color: #006CB7 !important;
     text-align: center;
+    color: white !important;
+}
+
+.badge-boleta {
+    width: 200px !important;
+    margin: auto !important;
+}
+
+#contenedorBoleta {
+    text-align: center !important;
+}
+
+#contendorAccionesCompra {
+    text-align: center !important;
+}
+
+#formAgregarProducto {
+    text-align: center !important;
 }

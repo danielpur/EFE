@@ -9,8 +9,7 @@ if (
 ) {
     $usuario = $_POST['usuarioLogin'];
     $contrasenia = $_POST['passLogin'];
-    session_start();
-    $_SESSION['rutUsuarioSesion'] = $usuario;
+
 
 
     $usuarioLogin = new usuarioLogin();
@@ -19,6 +18,8 @@ if (
     if ($estadoUsuario == false) {
         header('location: ../indexNo.php');
     } else {
+        session_start();
+        $_SESSION['rutUsuarioSesion'] = $usuario;
         header('location: ../indexCliente.php');
     }
 }
@@ -28,4 +29,3 @@ if (isset($_GET['cerrar_sesion'])) {
     session_destroy();
     header('location: ../index.php');
 }
-?>

@@ -48,19 +48,31 @@ class Productos{
 			<th>Producto</th>
 			<th>Precio</th>
             <th>Agregar</th>
-            <th>Quitar</th>
+            <th>Cantidad</th>
+            <th>Total Producto ($)</th>
+            <th>Agregar al carrito</th>
 		</tr>
 	</thead><tbody>';
             while ($row = $query->fetch()) {
                 echo '
-                <input type="hidden" name="idProducto" value="' . $row["idProducto"] . '">
                 <tr>
                 <td>' . $row["nombreProducto"] . '</td>
-                <td>' . $row["precioProducto"] . '</td>
-                <td><button class="btn btn-primary" onclick="agregarProducto();">+</button></td> 
-                <td><button class="btn btn-primary">-</button></td>
+                <td> <input id="precioProducto'.$row["idProducto"].'" value="' . $row["precioProducto"] . '" disabled></td>
+                <td>
+                <button class="btn btn-primary" onclick="agregarVenta('.$row["idProducto"].');">+</button>
+                <button class="btn btn-primary" onclick="quitarVenta('.$row["idProducto"].');">-</button>
+                <form id="formAgregarProducto" method="POST" action="agregarproductoVenta.php">               
+                <td><input id="cantidadVenta'.$row["idProducto"].'" name="cantidadVenta" value=0 disabled></td>
+                <td><input id="totalVenta'.$row["idProducto"].'" name="totalVenta" value=0 disabled></td>
+                <input type="hidden" name="idProducto" value="' . $row["idProducto"] . '">
+                <input type="hidden" name="idBoleta" value="' . $_SESSION['boletaSesion'] . '">
+
+                <td><button class="btn btn-primary" type="submit">Agregar al carrito</button></td>
+                </form>
+            
             </tr>';
             }
+            echo '</tbody';
         } catch (Exception $e) {
             echo 'ERROR' . $e;
         }
