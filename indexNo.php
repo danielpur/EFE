@@ -21,6 +21,9 @@
         <div>
         </div>
     </header>
+    <?php 
+    include './vista/modulos/navegacion.php';
+    ?>
    
     <section>
 

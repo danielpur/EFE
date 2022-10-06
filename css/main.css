@@ -1,3 +1,7 @@
+body {
+    background-color: #256D85;
+}
+
 #formLogin {
     margin-top: 15px !important;
     margin: auto;
@@ -27,6 +31,12 @@
     background-color: #006CB7 !important;
     text-align: center;
     color: white !important;
+}
+
+#tablaMostrar td {
+    background-color: white !important;
+    text-align: center;
+    color: black !important;
 }
 
 .badge-boleta {

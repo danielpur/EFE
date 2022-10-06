@@ -15,6 +15,8 @@ $contraseniaCliente = $_POST['contraseniaCliente'];
 
 $clientes = new Clientes();
 $clientes->registrarCliente($rutCliente, $nombreCliente, $apellidoCliente, $contraseniaCliente);
+header('location: ../indexCliente.php');
+
 }
 
 ?>

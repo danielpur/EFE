@@ -58,10 +58,10 @@
                 </tr>
                 <tr>
                     <td>
-                        <label for="edad" class="form-label">Ingrese Contraseña</label>
+                        <label for="pass" class="form-label">Ingrese Contraseña</label>
                     </td>
                     <td>
-                        <input type="text" class="form-control" id="contraseniaCliente" name="contraseniaCliente">
+                        <input type="password" class="form-control" id="contraseniaCliente" name="contraseniaCliente">
                     </td>
                 </tr>
 

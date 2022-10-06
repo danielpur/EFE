@@ -32,3 +32,17 @@ idBoleta integer not null,
 foreign key (idProducto) references producto(idProducto),
 foreign key (idBoleta) references boleta(idBoleta)
 );
+
+create table usuarios(idUsuario integer not null primary key auto_increment,
+rutCliente integer (9),
+contrasenia varchar (20),
+foreign key (rutCliente) references cliente(rutCliente)
+);
+
+insert into sucursal values (null,'SANTIAGO', 'República 285, Santiago');
+insert into producto values (null,'PANTALONES', 30000);
+insert into producto values (null,'ZAPATILLAS', 50000);
+insert into producto values (null,'POLERAS', 10000);
+
+
+

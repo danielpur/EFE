@@ -17,7 +17,7 @@
 
     </header>
     <?php
-    include './vista/modulos/navegacionCompras.php';
+    include './vista/modulos/navegacionCliente.php';
     ?>
 
     <section>

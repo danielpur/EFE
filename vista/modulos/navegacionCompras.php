@@ -11,9 +11,6 @@
                         <a class="nav-link active" aria-current="page" href="compras.php">Comprar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./miscompras.php">Mis compras</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="login.php?cerrar_sesion=1">Cerrar Sesión</a>
                     </li>
                 </ul>
