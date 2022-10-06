@@ -61,9 +61,9 @@ class Productos{
                 <td>
                 <button class="btn btn-primary" onclick="agregarVenta('.$row["idProducto"].');">+</button>
                 <button class="btn btn-primary" onclick="quitarVenta('.$row["idProducto"].');">-</button>
-                <form id="formAgregarProducto" method="POST" action="agregarproductoVenta.php">               
-                <td><input id="cantidadVenta'.$row["idProducto"].'" name="cantidadVenta" value=0 disabled></td>
-                <td><input id="totalVenta'.$row["idProducto"].'" name="totalVenta" value=0 disabled></td>
+                <form id="formAgregarProducto" method="POST" action="./controlador/agregarproductoscarrito.php">               
+                <td><input id="cantidadVenta'.$row["idProducto"].'" name="cantidadVenta" value=0 readonly></td>
+                <td><input id="totalVenta'.$row["idProducto"].'" name="totalVenta" value=0 readonly></td>
                 <input type="hidden" name="idProducto" value="' . $row["idProducto"] . '">
                 <input type="hidden" name="idBoleta" value="' . $_SESSION['boletaSesion'] . '">
 

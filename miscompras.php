@@ -20,28 +20,12 @@
     include './vista/modulos/navegacionCompras.php';
     ?>
 
-    <div id="contenedorBoleta">
-        <label class="badge-boleta badge bg-info text-dark">N° Boleta: <span><?php session_start();
-                                                                                echo $_SESSION['boletaSesion']; ?></span></label>
-        <?php
-        include './controlador/mostrardatosboleta.php';
-        ?>
-    </div>
-    <div id="contendorAccionesCompra" class="d-flex justify-content-center">
-        <a class="btn btn-primary" href="./indexCliente.php">Realizar compra</a>
-        <form id="formCancelarCompra" method="POST" action="./controlador/cancelarcompra.php">
-            <input type="hidden" name="cancelacionBoleta" value=<?php echo $_SESSION['boletaSesion']; ?>>
-            <button class="btn btn-primary">Cancelar compra</button>
-        </form>
-    </div>
-
-
     <section>
         <div id=contenedorTablaMostrar class="px-5">
             <?php
-            include './modelo/productos.php';
-            $productos = new Productos();
-            $productos->mostrarProductosCliente();
+            include './modelo/compras.php';
+            $productos = new Compras();
+            $productos->mostrarComprasCliente();
             ?>
         </div>
     </section>

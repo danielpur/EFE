@@ -10,27 +10,30 @@ function agregarVenta(idProducto) {
 
     var precioProducto = document.getElementById(idPrecioProducto).value;
 
+
+
     cantidadActual = parseInt(cantidadActual);
     totalVentaActual = parseInt(totalVentaActual);
     precioProducto = parseInt(precioProducto);
 
+
     if (cantidadActual >= 0) {
         var nuevaCantidad = (cantidadActual + 1);
+        var nuevoTotalVenta = (totalVentaActual + precioProducto);
+
     } else {
         var nuevaCantidad = cantidadActual;
+        var nuevoTotalVenta = totalVentaActual;
+
     }
 
-    if (totalVentaActual >= 0) {
-        var nuevoTotalVenta = (totalVentaActual + precioProducto);
-    } else {
-        var nuevoTotalVenta = totalVentaActual;
-    }
 
     var cV = document.getElementById(idCantidadVenta);
     cV.value = nuevaCantidad;
 
     var tV = document.getElementById(idTotalVenta);
     tV.value = nuevoTotalVenta;
+
 
 }
 
@@ -43,7 +46,10 @@ function quitarVenta(idProducto) {
     var totalVentaActual = document.getElementById(idTotalVenta).value;
 
     var idPrecioProducto = 'precioProducto' + idProducto;
+
     var precioProducto = document.getElementById(idPrecioProducto).value;
+
+
 
     cantidadActual = parseInt(cantidadActual);
     totalVentaActual = parseInt(totalVentaActual);
@@ -51,20 +57,21 @@ function quitarVenta(idProducto) {
 
     if (cantidadActual > 0) {
         var nuevaCantidad = (cantidadActual - 1);
+        var nuevoTotalVenta = (totalVentaActual - precioProducto);
+
     } else {
         var nuevaCantidad = cantidadActual;
+        var nuevoTotalVenta = totalVentaActual;
+
     }
 
-    if (totalVentaActual > 0) {
-        var nuevoTotalVenta = (totalVentaActual - precioProducto);
-    } else {
-        var nuevoTotalVenta = totalVentaActual;
-    }
 
     var cV = document.getElementById(idCantidadVenta);
     cV.value = nuevaCantidad;
 
     var tV = document.getElementById(idTotalVenta);
     tV.value = nuevoTotalVenta;
+
+
 
 }
